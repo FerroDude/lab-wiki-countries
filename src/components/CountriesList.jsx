@@ -18,14 +18,14 @@ export class CountriesListView extends Component {
             <ul className="list-group">
               {' '}
               {list.map((country) => (
-                <Link to={`/country/${country.cca3}`}>
-                  <li
-                    className="list-group-item list-group-item-action"
-                    key={country.cca3}
-                  >
+                <li
+                  key={country.cca3}
+                  className="list-group-item list-group-item-action"
+                >
+                  <Link to={`/country/${country.cca3}`}>
                     {country.name.common}
-                  </li>
-                </Link>
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
